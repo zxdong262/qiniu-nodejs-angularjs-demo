@@ -1,0 +1,46 @@
+include ../ng-parts/head1
+meta(name='description', content='#{siteName}')
+meta(name='keywords', content='#{siteDesc}')
+title #{siteName}
+include ../ng-parts/head2
+#wrapper
+
+	.container
+		.jumbotron.mgtb
+			h1 七牛/nodejs/angularjs上传demo
+
+		.form-group
+			#msg-wrap
+			button#upload.btn.btn-warning(type='button')
+				span(ng-show='!pi.onupload') 上传
+				span(ng-show='pi.onupload')
+					i.icon.animate-spin !{icons.spin2}
+					|上传中...
+
+		ul.list-group(ng-if='pi.files.length')
+			li.list-group-item(ng-repeat='file in pi.files')
+				p
+					img.img-reponsive(ng-src='{{file.src}}', alt='')
+				p {{file}}
+
+
+	include ../ng-parts/footer-html
+
+include ../ng-parts/footer-js
+
+//qinniu upload
+script.
+
+	mn.qiniu = {
+		domain: '#{qiniu.domain}'
+		,https: '#{qiniu.https}'
+	}
+
+	//end
+
+script(src='#{cdn}/js/vender/plupload/plupload.full.min.js')
+script(src='#{cdn}/js/vender/qiniu/qiniu.min.js')
+
+script(src='#{cdn}/js/utils.js?#{version}')
+script(src='#{cdn}/js/demo.js?#{version}')
+include ../ng-parts/footer-end

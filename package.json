@@ -1,0 +1,28 @@
+{
+	"name": "qiniu-nodejs-angularjs-demo"
+	,"version": "0.0.1"
+	,"scripts": {
+		"start": "node --harmony app.js"
+	}
+	,"dependencies": {
+		"koa": "*"
+		,"co": "*"
+		,"lodash": "*"
+		,"koa-compress": "*"
+		,"koa-static": "*"
+		,"koa-etag": "*"
+		,"koa-conditional-get": "*"
+		,"koa-bodyparser": "*"
+		,"koa-favicon": "*"
+		,"koa-jade": "*"
+		,"useragent": "*"
+		,"koa-mount": "*"
+		,"koa-router": "*"
+		,"request": "*"
+		,"shortid": "*"
+		,"qiniu": "*"
+	}
+	,"devDependencies": {
+		"mocha": "^2.0.0"
+	}
+}
