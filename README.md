@@ -1,4 +1,4 @@
-# qiniu-nodejs-demo
+# qiniu-nodejs-angularjs-demo
 qiniu/nodejs/angularjs demo [linux only].
 
 ## 使用
