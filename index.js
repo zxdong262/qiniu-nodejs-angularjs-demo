@@ -8,7 +8,7 @@ koa = require('koa')
 ,serve = require('koa-static')
 ,conditional = require('koa-conditional-get')
 ,etag = require('koa-etag')
-,jade = require('koa-jade')
+,Jade = require('koa-jade')
 ,favicon = require('koa-favicon')
 ,bodyParser = require('koa-bodyparser')
 ,mount = require('koa-mount')
@@ -54,7 +54,7 @@ app.use(serve(__dirname + '/public', {
 app.use(bodyParser())
 
 //view engine
-app.use(jade.middleware({
+let jade = new Jade({
 	viewPath: __dirname + '/views'
 	,debug: false
 	,pretty: false
@@ -62,7 +62,9 @@ app.use(jade.middleware({
 	,locals: { _:_ }
 	//basedir: 'path/for/jade/extends',
 	,noCache: local.env !== 'production'
-}))
+})
+
+jade.use(app)
 
 //routes
 routes.init(app)

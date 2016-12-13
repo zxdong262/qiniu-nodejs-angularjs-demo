@@ -9,7 +9,7 @@ qiniu/nodejs/angularjs demo [linux only].
 #通过ngrok反向代理，使得七牛callback可以访问到本地端口
 
 #获取代码
-git clone git@github.com:zxdong262/qiniu-nodejs-demo.git
+git clone git@github.com:zxdong262/qiniu-nodejs-angularjs-demo.git
 cd qiniu-nodejs-demo
 cp config-sample.js config.js
 cp start-ngrok-sample.sh start-ngrok.sh
